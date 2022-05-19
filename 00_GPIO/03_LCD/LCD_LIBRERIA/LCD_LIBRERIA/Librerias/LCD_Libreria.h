@@ -1,0 +1,56 @@
+/*
+ * LCD_Libreria.h
+ *
+ * Created: 18/05/2022 21:08:27
+ *  Author: Diego
+ */ 
+
+
+#ifndef LCD_LIBRERIA_H_
+#define LCD_LIBRERIA_H_
+
+#include <avr/io.h>
+#include <stdint.h>
+
+
+#define E_ON  PORTB |=(1<<0);
+#define E_OFF PORTB &= ~(1<<0);
+
+#define RS_ON PORTB |=(1<<1);
+#define RS_OFF PORTB &= ~(1<<1);
+
+#define D4_ON PORTB |=(1<<2);
+#define D4_OFF PORTB &= ~(1<<2);
+
+#define D5_ON PORTB |=(1<<3);
+#define D5_OFF PORTB &= ~(1<<3);
+
+#define D6_ON PORTB |=(1<<4);
+#define D6_OFF PORTB &= ~(1<<4);
+
+#define D7_ON PORTB |=(1<<5);
+#define D7_OFF PORTB &= ~(1<<5);
+
+
+typedef enum{
+	Fila1=0,
+	Fila2,
+	Fila3,
+	Fila4
+}Ubicacion;
+
+
+void LCD_AVR_Cmd(uint8_t a);
+void LCD_AVR_Data_Bus(uint8_t a);
+void LCD_AVR_Init(void);
+void LCD_AVR_Set_Cursor(uint8_t x,Ubicacion y);
+void LCD_AVR_Print_Char(char c);
+void LCD_AVR_Print_String(char *c);
+
+
+
+
+
+
+
+#endif /* LCD_LIBRERIA_H_ */
