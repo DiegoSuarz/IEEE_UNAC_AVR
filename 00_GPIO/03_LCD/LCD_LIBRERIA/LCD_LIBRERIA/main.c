@@ -13,6 +13,16 @@
 int main(void)
 {
 	LCD_AVR_Init();
+	LCD_AVR_New_Char(4,0x0A,0x1F,0x1F,0x0E,0x0E,0x04,0x00,0x00);
+	//LCD_AVR_New_Char(2,0x0A,0x1F,0x1F,0x0E,0x0E,0x04,0x01,0x00);
+	//LCD_AVR_New_Char(3,0x0A,0x1F,0x1F,0x0E,0x0E,0x04,0x02,0x00);
+	//LCD_AVR_New_Char(4,0x0A,0x1F,0x1F,0x0E,0x0E,0x04,0x03,0x00);
+	//LCD_AVR_New_Char(2,0x0A,0x1F,0x1F,0x0E,0x0E,0x04,0x04,0x00);
+	//LCD_AVR_New_Char(2,0x0A,0x1F,0x1F,0x0E,0x0E,0x04,0x05,0x00);
+	//LCD_AVR_New_Char(2,0x0A,0x1F,0x1F,0x0E,0x0E,0x04,0x06,0x00);
+	//LCD_AVR_New_Char(2,0x0A,0x1F,0x1F,0x0E,0x0E,0x04,0x07,0x00);
+	//LCD_AVR_New_Char(2,0x0A,0x1F,0x1F,0x0E,0x0E,0x04,0x08,0x00);
+	
 	//LCD_AVR_Set_Cursor(0,Fila1);
 	//LCD_AVR_Print_Char('H');
 	//LCD_AVR_Set_Cursor(0,Fila2);
@@ -23,14 +33,21 @@ int main(void)
 	//LCD_AVR_Print_Char('A');
 	
 	
-	LCD_AVR_Set_Cursor(0,Fila1);
-	LCD_AVR_Print_String("Bienvidos al Curso");
-	LCD_AVR_Set_Cursor(0,Fila2);
-	LCD_AVR_Print_String("de AVR en C");
-	LCD_AVR_Set_Cursor(0,Fila3);
-	LCD_AVR_Print_String("EMBS UNAC");
-	LCD_AVR_Set_Cursor(0,Fila4);
-	LCD_AVR_Print_String("MUCHAS GRACIAS");
+	
+	LCD_AVR_Print_New_Char(1);
+	LCD_AVR_Print_New_Char(2);
+	LCD_AVR_Print_New_Char(3);
+	LCD_AVR_Print_New_Char(4);
+	LCD_AVR_Print_New_Char(5);
+	LCD_AVR_Print_New_Char(6);
+	LCD_AVR_Print_New_Char(7);
+	//LCD_AVR_Set_Cursor(0,Fila2);
+	//LCD_AVR_Print_New_Char(2);
+	//LCD_AVR_Set_Cursor(0,Fila3);
+	//LCD_AVR_Print_New_Char(3);
+	//LCD_AVR_Set_Cursor(0,Fila4);
+	//LCD_AVR_Print_New_Char(4);
+	
 	for (;;)
 	{
 		
