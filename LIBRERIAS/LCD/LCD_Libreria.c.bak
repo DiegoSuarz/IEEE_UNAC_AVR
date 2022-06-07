@@ -45,7 +45,7 @@ void LCD_AVR_Init(void){
 	LCD_AVR_Cmd(0X00);
 	LCD_AVR_Cmd(0X01);
 	LCD_AVR_Cmd(0X00);
-	LCD_AVR_Cmd(0X0C);
+	LCD_AVR_Cmd(0X0D);
 	
 }
 void LCD_AVR_Set_Cursor(uint8_t x,Ubicacion y){
