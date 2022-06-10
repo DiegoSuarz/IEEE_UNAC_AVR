@@ -91,14 +91,14 @@ void Ejemplo1(void){
 
 void Ejemplo2(void){
 	//inciamos la conversion
-	pot0 = (float)(ADC_AnalogRead(AN0)*VREF_AVR)/VREF_AVR;
-	pot1 = (float)(ADC_AnalogRead(AN1)*VREF_AVR)/VREF_AVR;
-	pot2 = (float)(ADC_AnalogRead(AN2)*VREF_AVR)/VREF_AVR;
-	pot3 = (float)(ADC_AnalogRead(AN3)*VREF_AVR)/VREF_AVR;
-	pot4 = (float)(ADC_AnalogRead(AN4)*VREF_AVR)/VREF_AVR;
-	pot5 = (float)(ADC_AnalogRead(AN5)*VREF_AVR)/VREF_AVR;
-	pot6 = (float)(ADC_AnalogRead(AN6)*VREF_AVR)/VREF_AVR;
-	pot7 = (float)(ADC_AnalogRead(AN7)*VREF_AVR)/VREF_AVR;
+	pot0 = (float)ADC_AnalogRead(AN0)*VREF_AVR/Resolucion_AVR;
+	pot1 = (float)ADC_AnalogRead(AN1)*VREF_AVR/Resolucion_AVR;
+	pot2 = (float)ADC_AnalogRead(AN2)*VREF_AVR/Resolucion_AVR;
+	pot3 = (float)ADC_AnalogRead(AN3)*VREF_AVR/Resolucion_AVR;
+	pot4 = (float)ADC_AnalogRead(AN4)*VREF_AVR/Resolucion_AVR;
+	pot5 = (float)ADC_AnalogRead(AN5)*VREF_AVR/Resolucion_AVR;
+	pot6 = (float)ADC_AnalogRead(AN6)*VREF_AVR/Resolucion_AVR;
+	pot7 = (float)ADC_AnalogRead(AN7)*VREF_AVR/Resolucion_AVR;
 	//
 	//convertimos uint a string (ascii)
 	sprintf((char*)Buffer0,"%0.2f",pot0);
