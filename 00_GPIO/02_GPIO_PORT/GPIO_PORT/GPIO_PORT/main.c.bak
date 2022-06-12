@@ -142,7 +142,7 @@ void Ejemplo_pulsadores(void){
 	
 	DDRB |= (1<<0)|(1<<1)|(1<<2); //pb0, pb1, pb2 salidas, DDRB |= ((1<<0)|((1<<1)|(1<<2));
 	
-	DDRD &= ~(1<<0) & ~(1<<5); //pd0 y pd5 entradas, DDRD &= ~((1<<0)|(1<<5))  , DDRD &= ~((1<<0)&(1<<5));
+	DDRD &= ~(1<<0) & ~(1<<5); //pd0 y pd5 entradas, DDRD &= ~((1<<0)|(1<<5));
 	DDRC &= ~(1<<0); //pc0 entrada
 	
 	
