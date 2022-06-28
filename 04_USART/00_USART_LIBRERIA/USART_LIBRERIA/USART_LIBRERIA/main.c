@@ -14,7 +14,8 @@
 #include "USART_AVR.h"
 
 void ejemplo1(void);
-
+void ejemplo2(void);
+void ejemplo3(void);
 
 int main(void)
 {
@@ -25,19 +26,36 @@ int main(void)
     while (1) 
     {
 		
-		ejemplo1();	
-		
+		//ejemplo1();	
+		//ejemplo2();
+		ejemplo3();	
     }
 }
 
 void ejemplo1(void){
-	USART0_PrintString("Clase 5\n\4");
-	USART0_PrintString("EMBS UNAC");
-	USART0_PrintString("HOLA \n\r\n\r");
-	_delay_ms(500);
+	USART0_PrintChar('H');
+	_delay_ms(300);
+	USART0_PrintChar('o');
+	_delay_ms(300);
+	USART0_PrintChar('l');
+	_delay_ms(300);
+	USART0_PrintChar('a');
+	_delay_ms(300);
 }
 
+void ejemplo2(void){
+	USART0_PrintString("Clase 5\n\r");
+	_delay_ms(300);
+	USART0_PrintString("EMBS UNAC\n\r");
+	_delay_ms(300);
+	USART0_PrintString("HOLA \n\r");
+	_delay_ms(300);
+}
 
+void ejemplo3(void){
+	USART0_PrintString("50\n\r");
+	_delay_ms(5);
+}
 
 ISR(USART_RX_vect){  //servicio de rutina de interrupción, se activa cada vez que se recepciona un dato
 	char dato = UDR0;		
