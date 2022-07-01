@@ -32,7 +32,7 @@ void LCD_AVR_Data_Bus(uint8_t a){
 }
 void LCD_AVR_Init(void){
 	
-	DDRB |= (1<<0) |(1<<1)|(1<<2)|(1<<3)|(1<<4)|(1<<5);
+	DDRC |= (1<<0) |(1<<1)|(1<<2)|(1<<3)|(1<<4)|(1<<5);
 	
 	LCD_AVR_Cmd(0X03);
 	LCD_AVR_Cmd(0X03);
@@ -45,7 +45,7 @@ void LCD_AVR_Init(void){
 	LCD_AVR_Cmd(0X00);
 	LCD_AVR_Cmd(0X01);
 	LCD_AVR_Cmd(0X00);
-	LCD_AVR_Cmd(0X0D);
+	LCD_AVR_Cmd(0X0C);
 	
 }
 void LCD_AVR_Set_Cursor(uint8_t x,Ubicacion y){
